@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
 str = "and that piece of art is useful - Dora Korpar, 2015-10-19"
-sys.stdout.write(str)
-sys.stdout.write("\n")
+sys.stderr.write(str)
+sys.stderr.write("\n")
 sys.exit(1)
