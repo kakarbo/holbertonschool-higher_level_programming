@@ -5,7 +5,7 @@ if number >= 0:
     num = number % 10
 else:
     num = number % -10
-print("Las digit of", number, "is", num, end=" ")
+print('Las digit of', number, 'is', num, end=' ')
 if num > 5:
     print("and is greater than 5")
 elif num == 0:
