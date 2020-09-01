@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-num = number % 10
-if number < 0:
-    num = abs(number) % 10
-    num = -num
+if number >= 0:
+    num = number % 10
+else:
+    num = number % -10
 print("Las digit of", number, "is", num, end=" ")
 if num > 5:
     print("and is greater than 5")
