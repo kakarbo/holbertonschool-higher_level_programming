@@ -8,4 +8,4 @@ if lastdigit > 5:
 elif lastdigit == 0:
     print(str.format(number, lastdigit, "and is 0"))
 else:
-    print(str.format(number, lastdigit, "and is less than 6 and not 0"))
+    print(str.format(number, lastdigit, "and is less than 6  and not 0"))
