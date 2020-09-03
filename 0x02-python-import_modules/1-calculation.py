@@ -5,8 +5,7 @@ if __name__ == "__main__":
     b = 5
     d = '+'
     c = '='
-    str = ("{} {} {} {} {}")
-    print(str.format(a, d, b, c, add(a, b)))
-    print(str.format(a, d, b, c, sub(a, b)))
-    print(str.format(a, d, b, c, mul(a, b)))
-    print(str.format(a, d, b, c, div(a, b)))
+    print(a, d, b, c, add(a, b))
+    print(a, d, b, c, sub(a, b))
+    print(a, d, b, c, mul(a, b))
+    print(a, d, b, c, div(a, b))
