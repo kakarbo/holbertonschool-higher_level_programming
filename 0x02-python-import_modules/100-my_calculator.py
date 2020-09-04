@@ -6,17 +6,17 @@ if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: ./100-my_calculator <a> <operator> <b>")
         sys.exit(1)
-    a = argv[1]
-    b = argv[3]
-    operato = argv[2]
-    if "+" == operato:
-        print("{} {} {} = {}".format(a, operato, b, add(int(a), int(b))))
-    elif "-" == operato:
-        print("{} {} {} = {}".format(a, operato, b, sub(int(a), int(b))))
-    elif "*" == operato:
-        print("{} * {} = {}".format(a, b, mul(int(a), int(b))))
-    elif '/' == operato:
-        print("{} {} {} = {}".format(a, operato, b, div(int(a), int(b))))
+    a = int(argv[1])
+    b = int(argv[3])
+    operator = argv[2]
+    if "+" == operator:
+        print("{} {} {} = {}".format(a, operator, b, add(a, b)))
+    elif "-" == operator:
+        print("{} {} {} = {}".format(a, operator, b, sub(a, b)))
+    elif "*" == operator:
+        print("{} {} {} = {}".format(a, operator, b, mul(a, b)))
+    elif '/' == operator:
+        print("{} {} {} = {}".format(a, operator, b, div(a, b)))
     else:
         print("Unknow operator. Available operators: +, -, * and /")
         sys.exit(1)
