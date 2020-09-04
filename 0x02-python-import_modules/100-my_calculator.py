@@ -2,7 +2,6 @@
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
-
     argv = sys.argv
     conteo = len(sys.argv) - 1
     if len(sys.argv) != 4:
@@ -11,7 +10,6 @@ if __name__ == "__main__":
     a = argv[conteo - 2]
     b = argv[conteo]
     operato = argv[conteo - 1]
-    
     if "+" == operato:
         print("{} {} {} = {}".format(a, operato, b, add(int(a), int(b))))
     elif "-" == operato:
