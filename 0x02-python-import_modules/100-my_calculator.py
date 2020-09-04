@@ -10,7 +10,7 @@ if __name__ == "__main__":
     b = argv[3]
     operato = argv[2]
     if "+" == operato:
-        print("{} + {} = {}".format(a,nb, add(int(a), int(b))))
+        print("{} + {} = {}".format(a, b, add(int(a), int(b))))
     elif "-" == operato:
         print("{} - {} = {}".format(a, b, sub(int(a), int(b))))
     elif "*" == operato:
