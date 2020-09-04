@@ -13,5 +13,3 @@ else:
     print("{} arguments:".format(conteo))
     for i in range(1, conteo + 1):
         print("{}: {}".format(i, argv[i]))
-    
-    
