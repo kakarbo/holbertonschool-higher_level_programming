@@ -7,4 +7,3 @@ def print_matrix_integer(matrix=[[]]):
             cadena = cadena + "{:d} ".format(a)
         cadena = cadena[:-1]
     print(cadena[1:])
-
