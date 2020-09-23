@@ -1,3 +1,6 @@
+#!/usr/bin/python3
 class Square:
-    """Class Square that defines a square """
-    pass
+    """class square that defines a square"""
+    def square(self):
+        """ define a square"""
+        pass
