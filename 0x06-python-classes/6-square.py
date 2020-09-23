@@ -49,6 +49,9 @@ with the message size must be >= 0"""
         if not isinstance(value, tupla):
             print("position must be a tuple of 2 positive integers")
             raise TypeError
+        elif value < 0:
+            print("size must be >= 0")
+            raise ValueError
         else:
             self.__position = value
 
