@@ -15,18 +15,8 @@ exception with the message size must be an integer
 if size is less than 0, raise a ValueError exception
 with the message size must be >= 0"""
     def __init__(self, size=0, position=(0, 0)):
-        if not isinstance(size, int):
-            print("size must be an integer")
-            raise TypeError
-        elif size < 0:
-            print("size must be >= 0")
-            raise ValueError
-        else:
-            self.__size = size
-            self.__position = position
-        if not isinstance(position, tuple):
-            print("position must be a tuple of 2 positive integers")
-            raise TypeError
+            self.size = size
+            self.position = position
 
     @property
     def size(self):
@@ -49,12 +39,15 @@ with the message size must be >= 0"""
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, int):
+        if not isinstance(value, tuple) or len(value) != 2:
             print("position must be a tuple of 2 positive integers")
             raise TypeError
-        elif value < 0:
-            print("size must be >= 0")
-            raise ValueError
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            print("position must be a tuple of 2 positive integers")
+            raise TypeError
+        if value[0] < 0 or value[1] < 0:
+            print("position must be a tuple of 2 positive integers")
+            raise TypeError
         else:
             self.__position = value
 
