@@ -34,7 +34,7 @@ with the message size must be >= 0"""
         if not isinstance(value, int):
             print("size must be an integer")
             raise TypeError
-        elif size < 0:
+        elif value < 0:
             print("size must be >= 0")
             raise ValueError
         else:
@@ -46,7 +46,7 @@ with the message size must be >= 0"""
 
     @position.setter
     def position(self, value):
-        if not isinstance(self.__position, tupla):
+        if not isinstance(value, tupla):
             print("position must be a tuple of 2 positive integers")
             raise TypeError
         else:
