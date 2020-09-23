@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""0-square.py
+This module makes an empty class Square that defines a square"""
+
+
 class Square:
-    """class square that defines a square"""
-    def square(self):
-        """ define a square"""
-        pass
+    """an empty class Square that defines a square"""
+    pass
