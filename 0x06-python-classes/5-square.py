@@ -49,5 +49,5 @@ with the message size must be >= 0"""
         else:
             for i in range(self.__size):
                 for x in range(self.__size):
-                    print("#", file=sys.stdout,end="")
+                    print("#", file=sys.stdout, end="")
                 print()
