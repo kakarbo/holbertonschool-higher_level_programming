@@ -24,11 +24,9 @@ with the message size must be >= 0"""
         else:
             self.__size = size
             self.__position = position
-        if len(position) < 2 or len(position) > 2:
+        if not isinstance(position, tuple):
             print("position must be a tuple of 2 positive integers")
             raise TypeError
-        #elif position[0] != 0 and position[1] != 0:
-            #print("es negativo")
 
     @property
     def size(self):
