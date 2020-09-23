@@ -18,10 +18,6 @@ with the message size must be >= 0"""
         if not isinstance(size, int):
             print("size must be an integer")
             raise TypeError
-        elif not isinstance(position, tuple):
-            if len(position) != 2:
-                print("position must be a tuple of 2 positive integers")
-                raise TypeError
         elif size < 0:
             print("size must be >= 0")
             raise ValueError
@@ -67,13 +63,12 @@ with the message size must be >= 0"""
         if self.__size == 0:
             print()
         else:
+            if self.__position[1] > 0:
+                print()
             for i in range(self.__size):
                 if self.__position[0] != 0:
                     for a in range(self.__position[0]):
                         print(" ", file=sys.stdout, end="")
-                elif self.__position[1] > 0:
-                    for a in range(self.__position[1]):
-                        print("", file=sys.stdout, end="")
                 for x in range(self.__size):
                     print("#", file=sys.stdout, end="")
                 print()
