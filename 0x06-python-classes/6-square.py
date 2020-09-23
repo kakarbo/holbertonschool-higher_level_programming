@@ -63,21 +63,13 @@ with the message size must be >= 0"""
         if self.__size == 0:
             print()
         else:
-            if not isinstance(self.__position[1], int):
-                for i in range(self.__size):
-                    if self.__position[0] != 0:
-                        for a in range(self.__position[0]):
-                            print(" ", file=sys.stdout, end="")
-                    for x in range(self.__size):
-                        print("#", file=sys.stdout, end="")
+            if self.__position[1] > 0:
+                for i in range(self.__position[1]):
                     print()
-            else:
-                if self.__position[1] > 0:
-                    print()
-                for i in range(self.__size):
-                    if self.__position[0] != 0:
-                        for a in range(self.__position[0]):
-                            print(" ", file=sys.stdout, end="")
-                    for x in range(self.__size):
-                        print("#", file=sys.stdout, end="")
-                    print()
+            for i in range(self.__size):
+                if self.__position[0] != 0:
+                    for a in range(self.__position[0]):
+                        print(" ", file=sys.stdout, end="")
+                for x in range(self.__size):
+                    print("#", file=sys.stdout, end="")
+                print()
