@@ -71,6 +71,9 @@ with the message size must be >= 0"""
                 if self.__position[0] != 0:
                     for a in range(self.__position[0]):
                         print(" ", file=sys.stdout, end="")
+                elif self.__position[1] > 0:
+                    for a in range(self.__position[1]):
+                        print("", file=sys.stdout, end="")
                 for x in range(self.__size):
                     print("#", file=sys.stdout, end="")
                 print()
