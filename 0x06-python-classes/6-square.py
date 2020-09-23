@@ -63,7 +63,7 @@ with the message size must be >= 0"""
         if self.__size == 0:
             print()
         else:
-            if self.__position[1] > 0:
+            if self.__position[1] > 0 or not isinstance(self.__position[1], int):
                 print()
             for i in range(self.__size):
                 if self.__position[0] != 0:
