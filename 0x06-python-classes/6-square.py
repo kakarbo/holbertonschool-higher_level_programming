@@ -19,8 +19,9 @@ with the message size must be >= 0"""
             print("size must be an integer")
             raise TypeError
         elif not isinstance(position, tuple):
-            print("position must be a tuple of 2 positive integers")
-            raise TypeError
+            if len(position) != 2:
+                print("position must be a tuple of 2 positive integers")
+                raise TypeError
         elif size < 0:
             print("size must be >= 0")
             raise ValueError
