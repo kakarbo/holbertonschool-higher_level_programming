@@ -15,6 +15,7 @@ class Square:
     Public instance method: def area(self): that returns the current square are"""
     
     def __init__(self, size=0):
+        """this function instantiation with private instance attribute: size"""
         if not isinstance(size, int):
             print("size must be an integer", end="")
             raise TypeError
@@ -24,4 +25,5 @@ class Square:
         else:
             self.__size = size
     def area(self):
+        """this function public instance that returns the curretn square area"""
         return(self.__size ** 2)    
