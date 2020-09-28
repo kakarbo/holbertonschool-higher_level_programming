@@ -47,8 +47,6 @@ class Rectangle:
     def __str__(self):
         empty_string = ""
         if self.height != 0 and self.width != 0:
-            for i in range(self.height):
-                for x in range(self.width):
-                    print("#", end="")
-                print()
+            empty_string = "".join(("#" * self.width + "\n") * self.height)
+            empty_string = empty_string[:-1]
         return(empty_string)
