@@ -53,13 +53,13 @@ class Rectangle:
         empty_string = ""
         if not isinstance(self.print_symbol, list):
             if self.__height != 0 and self.__width != 0:
-                empty_string = "".join((my * self.width + "\n") * self.height)
+                empty_string = "".join((my * self.__width+"\n")*self.__height)
                 empty_string = empty_string[:-1]
             return(empty_string)
         else:
             my = repr(self.print_symbol)
             if self.__height != 0 and self.__width != 0:
-                empty_string = "".join((my * self.width + "\n") * self.height)
+                empty_string = "".join((my * self.__width+"\n")*self.__height)
                 empty_string = empty_string[:-1]
             return(empty_string)
 
