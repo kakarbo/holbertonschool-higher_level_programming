@@ -43,7 +43,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return(0)
         return((self.__width + self.__height) * 2)
-    
+
     def __str__(self):
         empty_string = ""
         if self.__height != 0 and self.__width != 0:
@@ -52,5 +52,5 @@ class Rectangle:
         return(empty_string)
 
     def __repr__(self):
-        new_insta = "Rectangle(" + repr(self.__width) + "," + repr(self.__height) + ")"
-        return(new_insta)
+        new_insta = self.__class__.__name__ + "(" + repr(self.width) + ", "
+        return(new_insta + repr(self.height) + ")")
