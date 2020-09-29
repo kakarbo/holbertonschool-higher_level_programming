@@ -49,21 +49,12 @@ class Rectangle:
         return((self.__width + self.__height) * 2)
 
     def __str__(self):
-        Rectangle.print_symbol = self.print_symbol
-        my = Rectangle.print_symbol
         empty_string = ""
-        if not isinstance(self.print_symbol, list):
-            if self.__height != 0 and self.__width != 0:
-                empty_string = "".join((my * self.width + "\n") * self.height)
-                empty_string = empty_string[:-1]
-            return(empty_string)
-        else:
-            Rectangle.print_symbol = repr(self.print_symbol)
-            my = Rectangle.print_symbol
-            if self.__height != 0 and self.__width != 0:
-                empty_string = "".join((my * self.width + "\n") * self.height)
-                empty_string = empty_string[:-1]
-            return(empty_string)
+        if self.height != 0 and self.width != 0:
+            empty_string = "".join((
+                str(self.print_symbol) * self.width + "\n") * self.height)
+            empty_string = empty_string[:-1]
+        return(empty_string)
 
     def __repr__(self):
         new_insta = self.__class__.__name__ + "(" + repr(self.width) + ", "
