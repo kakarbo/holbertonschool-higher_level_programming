@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""function that multiplies 2 matrices:"""
+"""function that multiplies 2 matrices: """
 
 
 def matrix_mul(m_a, m_b):
