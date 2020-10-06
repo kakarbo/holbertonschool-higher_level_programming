@@ -1,0 +1,36 @@
+>>> MyList = __import__('1-my_list').MyList
+
+
+==================================================
+= How to use this class to print an ordered list =
+==================================================
+
+
+class MyList(list):
+    """subclass inheriting from another class or object"""
+    def print_sorted(self):
+        new_list = sorted(self)
+        print(new_list)
+
+
+
+===================================================
+= add to list which is assigned to the class list =
+===================================================
+
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+
+=========================================================================
+= print the list my_list and print the list that is passed to the class =
+=========================================================================
+
+
+>>> print(my_list)
+>>> my_list.print_sorted()
+>>> print(my_list)
