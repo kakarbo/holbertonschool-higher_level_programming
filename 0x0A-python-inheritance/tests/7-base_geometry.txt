@@ -52,9 +52,6 @@
 ...     bg.integer_validator("age", True)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] name must be an integer
-[ValueError] age must be greater than 0
-[ValueError] distance must be greater than 0
 >>> try:
 ...     bg.integer_validator("age", {3,4})
 ... except Exception as e:
