@@ -13,9 +13,9 @@ def read_lines(filename="", nb_lines=0):
     with open(filename, mode="r", encoding="utf-8") as myFile:
         num_line = 1
         while True:
-            
+
             line = myFile.readline()
-            
+
             if nb_lines <= 0 or nb_lines >= num_line:
                 print(line, end="")
 
