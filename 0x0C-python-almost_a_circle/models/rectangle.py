@@ -71,39 +71,39 @@ class Rectangle(Base):
     def area(self):
         return(self.__width * self.__height)
 
-    def display(self):
-        str1 = "".join(" " * self.__x)
-        str2 = "".join("#" * self.__width)
-        for index in range(self.__y):
-            print()
-        for index in range(self.__height):
-            print(str1 + str2)
+    #def display(self):
+        #str1 = "".join(" " * self.__x)
+        #str2 = "".join("#" * self.__width)
+        #for index in range(self.__y):
+            #print()
+        #for index in range(self.__height):
+            #print(str1 + str2)
 
-    def __str__(self):
-        str1 = "[{}] ({}) ".format(Rectangle.__name__, self.id)
-        str2 = "{}/{} - ".format(self.__x, self.__y)
-        return(str1 + str2 + "{}/{}".format(self.__width, self.__height))
+    #def __str__(self):
+        #str1 = "[{}] ({}) ".format(Rectangle.__name__, self.id)
+        #str2 = "{}/{} - ".format(self.__x, self.__y)
+        #return(str1 + str2 + "{}/{}".format(self.__width, self.__height))
 
-    def update(self, *args, **kwargs):
-        if len(args) > 0:
-            self.id = args[0]
-        if len(args) > 1:
-            self.__width = args[1]
-        if len(args) > 2:
-            self.__height = args[2]
-        if len(args) > 3:
-            self.__x = args[3]
-        if len(args) > 4:
-            self.__y = args[4]
-        if args is None or len(args) == 0:
-            for key, value in kwargs.items():
-                if key == "id":
-                    self.id = value
-                if key == "width":
-                    self.__width = value
-                if key == "height":
-                    self.__height = value
-                if key == "x":
-                    self.__x = value
-                if key == "y":
-                    self.__y = value
+    #def update(self, *args, **kwargs):
+        #if len(args) > 0:
+            #self.id = args[0]
+        #if len(args) > 1:
+            #self.__width = args[1]
+        #if len(args) > 2:
+            #self.__height = args[2]
+        #if len(args) > 3:
+            #self.__x = args[3]
+        #if len(args) > 4:
+            #self.__y = args[4]
+        #if args is None or len(args) == 0:
+            #for key, value in kwargs.items():
+                #if key == "id":
+                    #self.id = value
+                #if key == "width":
+                    #self.__width = value
+                #if key == "height":
+                    #self.__height = value
+                #if key == "x":
+                    #self.__x = value
+                #if key == "y":
+                    #self.__y = value
