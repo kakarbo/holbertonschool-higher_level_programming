@@ -6,6 +6,7 @@ from models.square import Square
 from models.rectangle import Rectangle
 import unittest
 
+
 class TestSquare(unittest.TestCase):
     """
     test class Square
