@@ -23,7 +23,7 @@ class Square(Rectangle):
         he overloading __str__ method should return
         """
         str1 = "[{}] ({}) ".format(Square.__name__, self.id)
-        str2 = "{}/{} - {}".format(self.x, self.y, self.__size)
+        str2 = "{}/{} - {}".format(self.x, self.y, self.size)
         return(str1 + str2)
 
     @property
@@ -31,7 +31,7 @@ class Square(Rectangle):
         """
         the getter
         """
-        return(self.__size)
+        return(self.width)
 
     @size.setter
     def size(self, value):
@@ -39,9 +39,5 @@ class Square(Rectangle):
         The setter should assign (in this order) the width
         and the height - with the same value
         """
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        elif value <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.__size = value
+        self.width = value
+        self.height = value
