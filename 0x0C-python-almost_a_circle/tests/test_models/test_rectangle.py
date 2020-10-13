@@ -22,7 +22,7 @@ class TestRectangle(unittest.TestCase):
         test id
         """
         self.assertEqual(self.test.id, 6)
-    
+
     def test_width(self):
         """
         test width
