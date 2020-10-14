@@ -9,6 +9,7 @@ class Square(Rectangle):
     """
     Class Square inherits from Rectangle
     """
+
     def __init__(self, size, x=0, y=0, id=None):
         """
         Class constructor
@@ -67,3 +68,14 @@ class Square(Rectangle):
                     self.x = value
                 if key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """
+        that returns the dictionary representation of a Rectangle:
+        """
+        dicts = {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "size": self.size}
+        return(dicts)
