@@ -75,5 +75,58 @@ class TestSquare(unittest.TestCase):
         """
         self.assertIsNone(self.test.display())
 
+    def testNoArgs(self):
+        """
+        test no args
+        """
+        with self.assertRaises(TypeError):
+            empty = Rectangle()
+
+    def testUpdateArgs(self):
+        """
+        test update *args
+        """ 
+        self.test.update(8,8,8,8,8)
+        self.assertEqual(self.test.id, 8)
+        self.assertEqual(self.test.width, 8)
+        self.assertEqual(self.test.height, 8)
+        self.assertEqual(self.test.x, 8)
+        self.assertEqual(self.test.y, 8)
+
+    def testUpdateKwargsId(self):
+        """
+        test update **kwargs id
+        """
+        self.test.update(id=6)
+        self.assertEqual(self.test.id, 6)
+
+    def testUpdateKwargsWidht(self):
+        """
+        test update **kwargs width
+        """
+        self.test.update(width=6)
+        self.assertEqual(self.test.width, 6)
+
+    def testUpdateKwargsHeight(self):
+        """
+        test update **kwargs height
+        """
+        self.test.update(height=6)
+        self.assertEqual(self.test.height, 6)
+
+    def testUpdateKwargs_x(self):
+        """
+        test update **kwargs x
+        """
+        self.test.update(x=6)
+        self.assertEqual(self.test.x, 6)
+
+    def testUpdateKwargs_y(self):
+        """
+        test update **kwargs y
+        """
+        self.test.update(y=6)
+        self.assertEqual(self.test.y, 6)
+
 if __name__ == "__main__":
     unittest.main()
