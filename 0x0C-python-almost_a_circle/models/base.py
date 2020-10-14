@@ -34,7 +34,7 @@ class Base:
         """
         filename = cls.__name__
         filename = filename + ".json"
-        with open(filename, mode="w") as myFile: 
+        with open(filename, mode="w") as myFile:
             if list_objs is None:
                 myFile.write("[]")
             else:
