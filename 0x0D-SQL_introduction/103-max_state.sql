@@ -1,3 +1,3 @@
 -- that displays the max temperature of each state (ordered by State name).
 -- DML Instrution
-SELECT state, MAX(value) AS avg_temp FROM temperatures WHERE month IN (A, Z) GROUP BY city ORDER BY avg_temp DESC LIMIT 3;
+SELECT state, MAX(value) AS max_temp FROM temperatures GROUP BY state ORDER BY max_temp ASC LIMIT 3;
