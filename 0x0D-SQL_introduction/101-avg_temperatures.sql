@@ -1,3 +1,3 @@
--- that converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.
+-- that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
 -- DML Instrution
-mysql -u root -p hbtn_0c_0 < temperatures.sql
+SELECT city AVG(value) AS avg_tempname FROM $temperatures WHERE name IS NOT NULL ORDER BY score DESC;
