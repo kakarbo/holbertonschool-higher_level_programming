@@ -13,7 +13,7 @@ def find_peak(list_of_integers):
     while low < high:
         num = (low + high) // 2
         if list_of_integers[num] <= list_of_integers[num + 1]:
-            low = mid + 1
+            low = num + 1
         elif list_of_integers[num] <= list_of_integers[num - 1]:
             high = num - 1
         elif (list_of_integers[num] >= list_of_integers[num + 1] and
