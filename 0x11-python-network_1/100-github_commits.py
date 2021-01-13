@@ -8,8 +8,9 @@ if __name__ == "__main__":
     url = "https://api.github.com/repos/{}/{}/commits".format(argv[1], argv[2])
     r = get(url)
     commits = r.json()
+    type('commits')
     try:
         for i in range(10):
-            print("{}: {}".format(commits[i].get("sha"), commits[i].get("commit").get("author").get("name").encode('utf-8')))
+            print("{}: {}".format(commits[i].get("sha"), commits[i].get("commit").get("author").get("name")).encode('utf-8'))
     except IndexError:
         pass
