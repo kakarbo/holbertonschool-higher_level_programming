@@ -1,4 +1,4 @@
-#include "lists.h"
+B#include "lists.h"
 
 /**
  * insert_node - function that inserts a number
@@ -10,12 +10,13 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *new_node = malloc(sizeof(listint_t));
+	listint_t *new_node;
 	listint_t *node = *head;
 
 	if (head == NULL)
 		return (NULL);
 
+	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL)
 		return (NULL);
 
