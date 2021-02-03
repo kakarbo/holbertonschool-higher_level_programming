@@ -7,7 +7,7 @@ if (process.argv.length <= 2) {
 } else {
   const myArray = [];
   for (let i = 2; i < process.argv.length; i++) {
-    myArray.push(Number.parseInt( process.argv[i], 10));
+    myArray.push(Number.parseInt(process.argv[i], 10));
   }
   const numberFirst = Math.max(...myArray);
   const pos = myArray.indexOf(numberFirst);
