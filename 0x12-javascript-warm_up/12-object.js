@@ -6,6 +6,8 @@ const myObject = {
 };
 console.log(myObject);
 for (const prop in myObject) {
-  myObject[prop] = 89;
+  if (prop === 'value') {
+    myObject[prop] = 89;
+  }
 }
 console.log(myObject);
