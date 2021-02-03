@@ -7,6 +7,7 @@ process.argv.forEach(() => {
 if (count <= 2) {
   console.log('No argument');
 }
-for (let i = 2; i < count; i++) {
+console.log(process.argv[3]);
+/*for (let i = 2; i < count; i++) {
   console.log(process.argv[i]);
-}
+}*/
