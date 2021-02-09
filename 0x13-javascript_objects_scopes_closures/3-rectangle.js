@@ -23,7 +23,7 @@ module.exports = class Rectangle {
       myString += 'X';
     }
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < i; j++) {
+      for (let j = i; j <= i; j++) {
         console.log(myString);
       }
     }
