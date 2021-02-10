@@ -11,11 +11,11 @@ request(process.argv[2], function (err, resp, body) {
   const json = JSON.parse(body);
   let i = 0;
   let count = 0;
-  for (let index in json) {
-    /* eslint-disable no-unused-vars */
-    index++;
-    /* eslint-disable no-unused-vars */
-    const people = json.results[i++].characters;
+  let people;
+  for (const index in json) {
+    if (index === 'results') {
+      people = json.results[i++].characters;
+    }
     for (const index of people) {
       if (index.endsWith('18/') === true) {
         count += 1;
