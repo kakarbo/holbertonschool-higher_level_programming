@@ -2,7 +2,7 @@
 // script that computes the number of tasks completed by user id.
 const request = require('request');
 request(process.argv[2], function (error, response, body) {
-  if (!response) {
+  if (error) {
     console.log(error);
   }
   const json = JSON.parse(body);
@@ -12,8 +12,7 @@ request(process.argv[2], function (error, response, body) {
   for (const index in json) {
     for (let i = 0; i <= 10; i++) {
       if (json[index].userId === i) {
-        const change = i;
-        if (i !== num && i > change - 1) {
+        if (i !== num) {
           count = 0;
           num++;
         }
