@@ -9,15 +9,10 @@ request(process.argv[2], function (err, resp, body) {
     console.log(err);
   }
   const json = JSON.parse(body);
-  let i = 0;
   let count = 0;
-  let people;
-  for (const index in json) {
-    if (index === 'results') {
-      people = json.results[i++].characters;
-    }
-    for (const index of people) {
-      if (index.endsWith('18/') === true) {
+  for (const index of json.results) {
+    for (const character of index.characters) {
+      if (character.endsWith('/18/')) {
         count += 1;
       }
     }
